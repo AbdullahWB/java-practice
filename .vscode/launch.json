@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "abdullah",
+            "request": "launch",
+            "mainClass": "abdullah",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "arguments",
+            "request": "launch",
+            "mainClass": "arguments",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "newMethod",
+            "request": "launch",
+            "mainClass": "newMethod",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "numbers",
+            "request": "launch",
+            "mainClass": "numbers",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "variable",
+            "request": "launch",
+            "mainClass": "variable",
+            "projectName": "java-practice_7bbd5a3f"
+        },
+        {
+            "type": "java",
+            "name": "welcome1",
+            "request": "launch",
+            "mainClass": "welcome1",
+            "projectName": "java-practice_7bbd5a3f"
+        }
+    ]
+}
