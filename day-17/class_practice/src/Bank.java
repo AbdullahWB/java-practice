@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class WithdrawalLimitExist extends Exception {
@@ -58,20 +57,21 @@ class Account {
 public class Bank {
 
     public static void main(String[] args) throws DepositLimitExist, WithdrawalLimitExist {
-        ArrayList<String> Array = new ArrayList<String>();
         Scanner scanner = new Scanner(System.in);
         Account account = new Account(1000);
         boolean exit = false;
-        int day = 0;
+        int day = 1;
 
         while (!exit) {
-            System.out.println("\nPlease select an option:");
+            System.out.println("\n==================== BANKING SYSTEM ====================");
             System.out.println("1. Deposit");
             System.out.println("2. Withdraw");
             System.out.println("3. Check Balance");
-            System.out.println("4. whats day today?");
-            System.out.println("5. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("4. Check Day");
+            System.out.println("5. Next Day");
+            System.out.println("6. Exit");
+            System.out.println("========================================================");
+            System.out.print("-> Enter your choice: ");
             int choice = scanner.nextInt();
             int limit = 5000;
             int depoLimit = 10000;
@@ -79,15 +79,16 @@ public class Bank {
 
             switch (choice) {
                 case 1 -> {
+                    System.out.println("\n>>> DEPOSIT <<<");
                     while (true) {
                         if (depoLimit == 10000) {
-                            System.out.print("Enter amount to deposit you limit to 10000 RMB : ");
+                            System.out.print("Enter amount to deposit (limit: " + depoLimit + " RMB): ");
                         } else {
-                            System.out.println("can you deposit more or exit if you exit type >>>0<<<");
+                            System.out.println("can you deposit (limit: " + depoLimit + " RMB): more or exit if you exit type >>>0<<<");
                         }
                         double depositAmount = scanner.nextDouble();
                         if (depositAmount > depoLimit) {
-                            System.out.println(" Deposit Limit Exist.  Please enter a value less than or equal to " + depoLimit);
+                            System.out.println(" Deposit Limit Exist.  Please enter a value less than or equal to " + "limit: " + depoLimit + " RMB");
                         } else if (depositAmount == 0) {
                             System.out.println("Deposit amount must be positive!");
                             if (depoLimit <= 0) {
@@ -135,8 +136,9 @@ public class Bank {
                 }
 
                 case 2 -> {
+                    System.out.println("\n>>> WITHDRAW <<<");
                     while (true) {
-                        System.out.print("Enter amount to withdraw (if you exit to withdraw for today Enter >>0<<) : ");
+                        System.out.print("Enter amount to withdraw (limit: " + limit + " RMB, type 0 to exit): ");
                         // int limit = 5000;
                         // int done;
                         double withdrawAmount = scanner.nextDouble();
@@ -185,22 +187,32 @@ public class Bank {
                     }
                 }
 
-                case 3 ->
-                    System.out.println("Current balance: " + account.CheckBalance() + "\n Day is: " + day);
+                case 3 -> {
+                    System.out.println("\n>>> CHECK BALANCE <<<");
+                    System.out.println("Your current balance: " + account.CheckBalance() + " RMB.");
+                    System.out.println("Day: " + day);
+                }
 
                 case 4 -> {
-                    System.out.println("""
-                                       Hi hello today...
-                                        Day is: """ + day);
-
+                    System.out.println("\n>>> CHECK DAY <<<");
+                    System.out.println("Today is Day: " + day + ".");
                 }
+
                 case 5 -> {
+                    day++;
+                    System.out.println("\n>>> NEXT DAY <<<");
+                    System.out.println("Today is Day: " + day + ".");
+                }
+
+                case 6 -> {
+                    System.out.println("\n>>> EXIT <<<");
+                    System.out.println("Thank you for using the bank! Goodbye!");
                     exit = true;
                 }
-                default ->
-                    System.out.println("""
-                                       Invalid choice. Please select a valid option.
-                                        Day is: """ + day);
+
+                default -> {
+                    System.out.println("\nInvalid choice! Please select a valid option.");
+                }
             }
         }
         scanner.close();
