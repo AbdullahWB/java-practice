@@ -11,6 +11,23 @@ class Outer_Demo {
         }
     }
 
+    void outerMethod() {
+        final String outerVariable = "Outer Method Variable";
+
+        class inner3 {
+
+            void innerMethod() {
+                try {
+                    System.out.println("I am in the inner method");
+                    System.out.println("Accessing " + outerVariable);
+                    int result = 10 / 0;
+                } catch (ArithmeticException e) {
+                    System.out.println("An arithmetic exception occurred");
+                }
+            }
+        }
+    }
+
 }
 
 public class App {
