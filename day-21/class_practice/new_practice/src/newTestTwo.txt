@@ -1,0 +1,4 @@
+This is the first line
+Lines 28–32 handle the SecurityException, which occurs if the user does not have
+permission to write data to the file. Lines 33–37 handle the FileNotFoundException,
+which occurs if the file does not exist and a new file cannot be created./n

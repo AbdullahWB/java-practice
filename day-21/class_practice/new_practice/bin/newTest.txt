@@ -1,0 +1,1 @@
+Hello, this is a sample text data being written in the output file using bufferedWrite(fileWriter)/nThis is another line
