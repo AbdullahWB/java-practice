@@ -1,1 +1,7 @@
-Hello, this is a sample text data being written in the output file using bufferedWrite(fileWriter)/nThis is another line
+Hello, this is a sample text data being written in the output file uusing BufferedOutputStream()
+
+this is another text data being written in the output file uusing BufferedOutputStream
+Student Name: 
+Mohammad
+Abdullah
+Sauda
