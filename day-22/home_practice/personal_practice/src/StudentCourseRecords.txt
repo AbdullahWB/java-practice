@@ -1,0 +1,4 @@
+StudentID       StudentName          CourseName      CourseGrade     Term      
+---------------------------------------------------------------------------
+12122023        Sauda Binta Bussra   EEE             4               Fall      
+12122024        Mohammad Abdullah    SET             4               Fall      

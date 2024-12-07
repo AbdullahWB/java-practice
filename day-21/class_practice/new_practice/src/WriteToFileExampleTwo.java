@@ -5,7 +5,7 @@ import java.io.FileWriter;
 public class WriteToFileExampleTwo {
 
     public static void main(String[] args) {
-        String[] studArray = {"Mohammad", "Abdullah", "Sauda"};
+        String[] studArray = { "Mohammad", "Abdullah", "Sauda" };
         String text = "Hello, this is a sample text data being written in the output file uusing BufferedOutputStream()";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("./newTest.txt"))) {
             writer.write(text);
