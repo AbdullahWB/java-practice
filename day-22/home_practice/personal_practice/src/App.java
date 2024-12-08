@@ -26,8 +26,14 @@ public class App {
                 System.out.print("Student Name: ");
                 String studentName = scanner.nextLine();
 
-                System.out.print("Course Name: ");
-                String courseName = scanner.nextLine();
+                System.out.print("Course Name 1: ");
+                String courseName1 = scanner.nextLine();
+
+                System.out.print("Course Name 2: ");
+                String courseName2 = scanner.nextLine();
+
+                System.out.print("Course Name 3: ");
+                String courseName3 = scanner.nextLine();
 
                 System.out.print("Course Grade: ");
                 String courseGrade = scanner.nextLine();
@@ -35,18 +41,22 @@ public class App {
                 System.out.print("Term: ");
                 String term = scanner.nextLine();
 
-                records.add(new String[] { studentID, studentName, courseName, courseGrade, term });
+                records.add(new String[] { studentID, studentName, courseName1, courseName2, courseName3, courseGrade,
+                        term });
             }
 
-            writer.write(String.format("%-15s %-20s %-15s %-15s %-10s", "StudentID", "StudentName", "CourseName",
+            writer.write(String.format("%-15s %-20s %-15s %-15s %-15s %-15s %-10s", "StudentID", "StudentName",
+                    "CourseName1", "CourseName2", "CourseName3", "CourseGrade",
                     "CourseGrade", "Term"));
             writer.newLine();
-            writer.write("---------------------------------------------------------------------------");
+            writer.write(
+                    "-------------------------------------------------------------------------------------------------------------------");
             writer.newLine();
 
             for (String[] record : records) {
-                writer.write(String.format("%-15s %-20s %-15s %-15s %-10s", record[0], record[1], record[2], record[3],
-                        record[4]));
+                writer.write(String.format("%-15s %-20s %-15s %-15s %-15s %-15s %-10s", record[0], record[1], record[2],
+                        record[3],
+                        record[4], record[5], record[6]));
                 writer.newLine();
             }
 

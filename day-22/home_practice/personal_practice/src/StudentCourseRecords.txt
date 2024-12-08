@@ -1,4 +1,3 @@
-StudentID       StudentName          CourseName      CourseGrade     Term      
----------------------------------------------------------------------------
-12122023        Sauda Binta Bussra   EEE             4               Fall      
-12122024        Mohammad Abdullah    SET             4               Fall      
+StudentID       StudentName          CourseName1     CourseName2     CourseName3     CourseGrade     CourseGrade
+-------------------------------------------------------------------------------------------------------------------
+2023222403356   Mohammad Abdullah    python          java            c pro           4               Fass      
