@@ -1,0 +1,6 @@
+P001,T-Shirt,19.99
+E001,Laptop,1299.99
+G001,Bread,5.99
+G002,Milk,2.49
+P002,Jeans,39.99
+E002,Smartphone,899.99
